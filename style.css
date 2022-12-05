@@ -9,7 +9,6 @@ body {
       color:white ; */
   margin: 0px;
   font-family: Arial, Helvetica, sans-serif;
-
 }
 
 /* header */
@@ -52,6 +51,9 @@ body {
   max-width: 700px;
   margin-right: 75px;
   padding: 1px;
+}
+input {
+  padding-left: 0.3em;
 }
 .Search_box {
   display: flex;
@@ -104,10 +106,9 @@ body {
   width: 30px;
   cursor: pointer;
 }
-.ball_icon_container{
+.ball_icon_container {
   /* padding-top: 2px; */
   position: relative;
-   
 }
 .notification_numbers {
   position: absolute;
@@ -141,19 +142,11 @@ body {
   flex-direction: column;
   text-align: center;
   flex: 1px;
-  min-width: 20px;
-  max-width: 140px;
-  position: fixed;
-  top: 50px;
-  bottom: 0px;
   width: 130px;
+  background-color: #eee;
 }
 .material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 48
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
 }
 
 .sidebar_icon .material-symbols-outlined {
@@ -161,41 +154,60 @@ body {
 }
 
 .sidebar_icon {
-  padding: 20px;
+  padding: 1rem;
   font-size: 15px;
   cursor: pointer;
   border-radius: 200px;
 }
 /* video.css */
 .video_grid {
-  padding-left: 130px;
-  padding-top: 75px;
+  padding-left: 10px;
+  padding-top: 10px;
   padding-right: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 20px;
   row-gap: 40px;
 }
-@media (max-width: 650px ){
-  .video_grid{
-    grid-template-columns: 1fr ;
+.container {
+  display: flex;
+  padding-top: 60px;
+  position: relative;
+}
+
+@media (max-width: 650px) {
+  .video_grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Sidebar on bottom on small screen */
+  .sidebar {
+    /* display: none; */
+    padding-top: 0;
+    position: fixed;
+    width: 100vw;
+    bottom: 0;
+    justify-content: space-around;
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
   }
 }
-@media (min-width:651px ) and (max-width:900px){
-  .video_grid{
+@media (min-width: 651px) and (max-width: 900px) {
+  .video_grid {
     grid-template-columns: 1fr 1fr;
   }
 }
-@media (min-width:901px ) and (max-width:1200px){
-  .video_grid{
+@media (min-width: 901px) and (max-width: 1200px) {
+  .video_grid {
     grid-template-columns: 1fr 1fr 1fr;
   }
-}  
-@media (min-width:1201px ) and (max-width:2000px){
-  .video_grid{
+}
+@media (min-width: 1201px) and (max-width: 2000px) {
+  .video_grid {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
-}  
+}
 .video_img {
   width: 100%;
 }
